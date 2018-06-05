@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace="mapper.TimeMapper">
+ 
+    <select id="nTime" resultType="domain.TimeVO">
+    	select 
+			date_format(now(),'%Y') as year,
+			date_format(now(),'%m') as month,
+			date_format(now(),'%d') as day,
+			date_format(now(),'%H') as hour,
+			date_format(now(),'%i') as min,
+			date_format(now(),'%s') as sec
+		from dual
+    </select>
+
+</mapper>
+
+
